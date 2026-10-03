@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Summer Shirt — Linen Summer</title>
+  <meta name="description" content="Order ticket for The Summer Shirt, undyed linen. Sample price. Payment is not live.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sheet">
+    <header class="mast">
+      <span>Linen Summer</span>
+      <span>linensummer.com</span>
+    </header>
+
+    <section class="order" id="order">
+      <p class="sku">LS-SS-01 · Undyed linen</p>
+      <h1>The Summer Shirt</h1>
+      <p class="colorline">Natural. No dye.</p>
+      <div class="price-row">
+        <p class="price">$148</p>
+        <p class="stamp">Natural<br>linen</p>
+      </div>
+      <p class="sample">Sample name and price, for this layout only. Not set by the shop.</p>
+
+      <form id="order-form" action="checkout.html">
+        <fieldset>
+          <legend>Size</legend>
+          <div class="sizes">
+            <label><input type="radio" name="size" value="XS"><span>XS</span></label>
+            <label><input type="radio" name="size" value="S"><span>S</span></label>
+            <label><input type="radio" name="size" value="M"><span>M</span></label>
+            <label><input type="radio" name="size" value="L"><span>L</span></label>
+            <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+          </div>
+        </fieldset>
+        <div class="buyrow">
+          <label class="qty" for="qty">Qty
+            <input id="qty" name="qty" type="number" min="1" max="6" value="1" inputmode="numeric">
+          </label>
+          <button type="submit">Buy</button>
+        </div>
+        <p id="form-note" class="form-note" role="status"></p>
+      </form>
+    </section>
+
+    <hr class="perf">
+
+    <section class="gallery" aria-label="The shirt">
+      <figure>
+        <img src="images/shirt-hanger.svg" width="800" height="1000" alt="Undyed linen shirt on a wooden hanger. Drawn stand-in, not a photograph.">
+        <figcaption>01 · Hanger</figcaption>
+      </figure>
+      <figure>
+        <img src="images/shirt-folded.svg" width="900" height="760" alt="The same shirt folded, collar on top. Drawn stand-in, not a photograph.">
+        <figcaption>02 · Folded</figcaption>
+      </figure>
+      <figure>
+        <img src="images/shirt-collar.svg" width="900" height="900" alt="Close view of the collar, placket, and linen weave. Drawn stand-in, not a photograph.">
+        <figcaption>03 · Collar</figcaption>
+      </figure>
+      <p class="standin">Stand-in drawings, not photographs.</p>
+    </section>
+
+    <hr class="perf">
+
+    <section class="film" aria-label="Cloth, stand-in">
+      <video controls playsinline preload="metadata" poster="images/video-poster.jpg" width="960" height="540">
+        <source src="media/linen-standin.mp4" type="video/mp4">
+      </video>
+      <p class="caption">Stand-in clip. Silent linen-colored frames until a shirt is filmed. No soundtrack.</p>
+    </section>
+
+    <footer class="footnote">
+      <p>Linen Summer, for Los Angeles in 2028. One undyed shirt, cut for the heat.</p>
+    </footer>
+  </div>
+
+  <a class="reach" href="#order" hidden>Order <strong>$148</strong></a>
+  <noscript>
+    <p class="sample" style="padding:1rem;">The ticket needs JavaScript to store an order on this device. Nothing here takes payment.</p>
+  </noscript>
+  <script src="shop.js"></script>
+</body>
+</html>

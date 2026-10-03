@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your ticket — Linen Summer</title>
+  <meta name="description" content="Order ticket for Linen Summer. Saved on this device. Payment is not live.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sheet">
+    <header class="mast">
+      <a href="index.html">The shirt</a>
+      <span>linensummer.com</span>
+    </header>
+
+    <h1>Your ticket</h1>
+    <p class="sample">Sample goods. Nothing on this page charges a card.</p>
+
+    <p id="empty" class="empty" hidden>Nothing on this ticket. <a href="index.html">Pick a size</a>.</p>
+    <ul id="lines" class="lines"></ul>
+    <p id="total" class="total" hidden></p>
+    <p class="sample">Sample price, for this layout only. Not set by the shop. Shipping is not calculated.</p>
+    <p class="actions"><button type="button" class="quiet" id="clear-ticket" hidden>Clear ticket</button></p>
+
+    <form id="pay-form" class="stack" hidden>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+
+      <label for="city">Shipping city</label>
+      <input id="city" name="city" type="text" autocomplete="address-level2" required>
+
+      <button type="submit">Save this order on this device — payment is not live yet</button>
+    </form>
+
+    <section id="saved" class="saved" hidden aria-live="polite"></section>
+  </div>
+  <div id="summary" hidden></div>
+  <noscript><p class="sample">The ticket needs JavaScript to store an order on this device. Nothing here takes payment.</p></noscript>
+  <script src="shop.js"></script>
+</body>
+</html>

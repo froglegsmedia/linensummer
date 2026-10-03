@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="t3">
+  <title id="t3">Collar and linen weave, close</title>
+  <defs>
+    <pattern id="weave" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#e7d5b8"/>
+      <path d="M0 7 H14" stroke="#d5c1a0" stroke-width="1"/>
+      <path d="M7 0 V14" stroke="#f3e6d0" stroke-width="1"/>
+      <path d="M0 0 L14 14" stroke="#efe0c4" stroke-width="0.4" opacity="0.7"/>
+    </pattern>
+    <pattern id="weave-collar" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#f0e4cc"/>
+      <path d="M0 6 H12" stroke="#e2d0b2" stroke-width="0.9"/>
+      <path d="M6 0 V12" stroke="#f7efe0" stroke-width="0.9"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="900" fill="url(#weave)"/>
+  <!-- shoulder slope -->
+  <path d="M0 210 C220 250 300 160 450 250 C600 160 700 250 900 200 L900 900 L0 900 Z" fill="url(#weave)" stroke="none"/>
+  <path d="M0 230 C200 280 320 180 450 270 C590 180 720 280 900 220" fill="none" stroke="#cbb892" stroke-width="3"/>
+  <!-- collar -->
+  <path fill="url(#weave-collar)" stroke="#1c1814" stroke-width="2.4" stroke-linejoin="round" d="
+    M210 250
+    L450 250
+    L450 330
+    L300 470
+    L150 300
+    Z"/>
+  <path fill="url(#weave-collar)" stroke="#1c1814" stroke-width="2.4" stroke-linejoin="round" d="
+    M690 250
+    L450 250
+    L450 330
+    L600 470
+    L750 300
+    Z"/>
+  <path d="M318 450 L450 360 L582 450" fill="none" stroke="#1c1814" stroke-width="1.6"/>
+  <path d="M210 268 H450 M450 268 H690" fill="none" stroke="#c4ae88" stroke-width="1.4"/>
+  <!-- placket -->
+  <path d="M450 345 V820" stroke="#1c1814" stroke-width="2" fill="none"/>
+  <path d="M438 345 V820 M462 345 V820" stroke="#d7c4a4" stroke-width="6"/>
+  <path d="M450 345 V820" stroke="#1c1814" stroke-width="1.6" fill="none"/>
+  <!-- buttons -->
+  <g fill="#f6f0e3" stroke="#1c1814" stroke-width="2">
+    <circle cx="450" cy="470" r="16"/>
+    <circle cx="450" cy="610" r="16"/>
+    <circle cx="450" cy="750" r="16"/>
+  </g>
+  <g fill="#1c1814">
+    <circle cx="444" cy="464" r="1.7"/>
+    <circle cx="456" cy="476" r="1.7"/>
+    <circle cx="444" cy="604" r="1.7"/>
+    <circle cx="456" cy="616" r="1.7"/>
+    <circle cx="444" cy="744" r="1.7"/>
+    <circle cx="456" cy="756" r="1.7"/>
+  </g>
+  <!-- tailor basting, faded blue -->
+  <path d="M250 560 H400" fill="none" stroke="#6d8794" stroke-width="2" stroke-dasharray="11 8" opacity="0.85"/>
+</svg>
