@@ -3,28 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Summer Shirt — Linen Summer</title>
-  <meta name="description" content="Order ticket for The Summer Shirt, undyed linen. Sample price. Payment is not live.">
+  <title>Linen Summer</title>
+  <meta name="description" content="Order tickets for undyed linen: The Summer Shirt, pants, shorts, and hat. Sample prices. Payment is not live.">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="sheet">
-    <header class="mast">
-      <span>Linen Summer</span>
-      <span>linensummer.com</span>
-    </header>
-
-    <section class="order" id="order">
+<body class="shop">
+  <h1 class="visually-hidden">Linen Summer</h1>
+  <main class="rack">
+    <article class="ticket" id="summer-shirt">
+      <header class="mast">
+        <span>Linen Summer</span>
+        <span>linensummer.com</span>
+      </header>
       <p class="sku">LS-SS-01 · Undyed linen</p>
-      <h1>The Summer Shirt</h1>
+      <h2>The Summer Shirt</h2>
       <p class="colorline">Natural. No dye.</p>
       <div class="price-row">
         <p class="price">$148</p>
         <p class="stamp">Natural<br>linen</p>
       </div>
       <p class="sample">Sample name and price, for this layout only. Not set by the shop.</p>
-
-      <form id="order-form" action="checkout.html">
+      <form class="order-form" action="checkout.html" data-id="the-summer-shirt" data-name="The Summer Shirt" data-color="Natural" data-cloth="Undyed linen" data-price="148">
         <fieldset>
           <legend>Size</legend>
           <div class="sizes">
@@ -36,48 +35,137 @@
           </div>
         </fieldset>
         <div class="buyrow">
-          <label class="qty" for="qty">Qty
-            <input id="qty" name="qty" type="number" min="1" max="6" value="1" inputmode="numeric">
+          <label class="qty" for="qty-shirt">Qty
+            <input id="qty-shirt" name="qty" type="number" min="1" max="6" value="1" inputmode="numeric">
           </label>
           <button type="submit">Buy</button>
         </div>
-        <p id="form-note" class="form-note" role="status"></p>
+        <p class="form-note" role="status"></p>
       </form>
-    </section>
-
-    <hr class="perf">
-
-    <section class="gallery" aria-label="The shirt">
       <figure>
-        <img src="images/shirt-hanger.svg" width="800" height="1000" alt="Undyed linen shirt on a wooden hanger. Drawn stand-in, not a photograph.">
+        <img src="images/shirt-hanger.svg" width="800" height="1000" alt="Undyed linen button shirt on a wooden hanger: short sleeve, collar, buttons, chest pocket. Drawn stand-in, not a photograph.">
         <figcaption>01 · Hanger</figcaption>
       </figure>
-      <figure>
-        <img src="images/shirt-folded.svg" width="900" height="760" alt="The same shirt folded, collar on top. Drawn stand-in, not a photograph.">
-        <figcaption>02 · Folded</figcaption>
-      </figure>
-      <figure>
-        <img src="images/shirt-collar.svg" width="900" height="900" alt="Close view of the collar, placket, and linen weave. Drawn stand-in, not a photograph.">
-        <figcaption>03 · Collar</figcaption>
-      </figure>
-      <p class="standin">Stand-in drawings, not photographs.</p>
-    </section>
+    </article>
 
-    <hr class="perf">
+    <article class="ticket" id="summer-pants">
+      <header class="mast">
+        <span>Linen Summer</span>
+        <span>linensummer.com</span>
+      </header>
+      <p class="sku">LS-SP-02 · Undyed linen</p>
+      <h2>The Summer Pants</h2>
+      <p class="colorline">Natural. No dye.</p>
+      <div class="price-row">
+        <p class="price">$26</p>
+        <p class="stamp">Natural<br>linen</p>
+      </div>
+      <p class="sample">Sample name and price, for this layout only. Not set by the shop.</p>
+      <form class="order-form" action="checkout.html" data-id="the-summer-pants" data-name="The Summer Pants" data-color="Natural" data-cloth="Undyed linen" data-price="26">
+        <fieldset>
+          <legend>Size</legend>
+          <div class="sizes">
+            <label><input type="radio" name="size" value="XS"><span>XS</span></label>
+            <label><input type="radio" name="size" value="S"><span>S</span></label>
+            <label><input type="radio" name="size" value="M"><span>M</span></label>
+            <label><input type="radio" name="size" value="L"><span>L</span></label>
+            <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+          </div>
+        </fieldset>
+        <div class="buyrow">
+          <label class="qty" for="qty-pants">Qty
+            <input id="qty-pants" name="qty" type="number" min="1" max="6" value="1" inputmode="numeric">
+          </label>
+          <button type="submit">Buy</button>
+        </div>
+        <p class="form-note" role="status"></p>
+      </form>
+      <figure>
+        <img src="images/pants-hanger.svg" width="800" height="1000" alt="Long undyed linen pants on a wooden hanger. Drawn stand-in, not a photograph.">
+        <figcaption>02 · Pants</figcaption>
+      </figure>
+    </article>
 
-    <section class="film" aria-label="Cloth, stand-in">
-      <video controls playsinline preload="metadata" poster="images/video-poster.jpg" width="960" height="540">
-        <source src="media/linen-standin.mp4" type="video/mp4">
-      </video>
-      <p class="caption">Stand-in clip. Silent linen-colored frames until a shirt is filmed. No soundtrack.</p>
-    </section>
+    <article class="ticket" id="summer-shorts">
+      <header class="mast">
+        <span>Linen Summer</span>
+        <span>linensummer.com</span>
+      </header>
+      <p class="sku">LS-25-01 · Undyed linen</p>
+      <h2>The Summer Shorts</h2>
+      <p class="colorline">Natural. No dye.</p>
+      <div class="price-row">
+        <p class="price">$18</p>
+        <p class="stamp">Natural<br>linen</p>
+      </div>
+      <p class="sample">Sample name and price, for this layout only. Not set by the shop.</p>
+      <form class="order-form" action="checkout.html" data-id="the-summer-shorts" data-name="The Summer Shorts" data-color="Natural" data-cloth="Undyed linen" data-price="18">
+        <fieldset>
+          <legend>Size</legend>
+          <div class="sizes">
+            <label><input type="radio" name="size" value="XS"><span>XS</span></label>
+            <label><input type="radio" name="size" value="S"><span>S</span></label>
+            <label><input type="radio" name="size" value="M"><span>M</span></label>
+            <label><input type="radio" name="size" value="L"><span>L</span></label>
+            <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+          </div>
+        </fieldset>
+        <div class="buyrow">
+          <label class="qty" for="qty-shorts">Qty
+            <input id="qty-shorts" name="qty" type="number" min="1" max="6" value="1" inputmode="numeric">
+          </label>
+          <button type="submit">Buy</button>
+        </div>
+        <p class="form-note" role="status"></p>
+      </form>
+      <figure>
+        <img src="images/shorts-hanger.svg" width="800" height="1000" alt="Undyed linen shorts with a drawstring, on a wooden hanger. Drawn stand-in, not a photograph.">
+        <figcaption>03 · Shorts</figcaption>
+      </figure>
+    </article>
+
+    <article class="ticket" id="summer-hat">
+      <header class="mast">
+        <span>Linen Summer</span>
+        <span>linensummer.com</span>
+      </header>
+      <p class="sku">LS-55-61 · Undyed linen</p>
+      <h2>The Summer Hat</h2>
+      <p class="colorline">Natural. No dye.</p>
+      <div class="price-row">
+        <p class="price">$40</p>
+        <p class="stamp">Natural<br>linen</p>
+      </div>
+      <p class="sample">Sample name and price, for this layout only. Not set by the shop.</p>
+      <form class="order-form" action="checkout.html" data-id="the-summer-hat" data-name="The Summer Hat" data-color="Natural" data-cloth="Undyed linen" data-price="40">
+        <fieldset>
+          <legend>Size</legend>
+          <div class="sizes">
+            <label><input type="radio" name="size" value="XS"><span>XS</span></label>
+            <label><input type="radio" name="size" value="S"><span>S</span></label>
+            <label><input type="radio" name="size" value="M"><span>M</span></label>
+            <label><input type="radio" name="size" value="L"><span>L</span></label>
+            <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+          </div>
+        </fieldset>
+        <div class="buyrow">
+          <label class="qty" for="qty-hat">Qty
+            <input id="qty-hat" name="qty" type="number" min="1" max="6" value="1" inputmode="numeric">
+          </label>
+          <button type="submit">Buy</button>
+        </div>
+        <p class="form-note" role="status"></p>
+      </form>
+      <figure>
+        <img src="images/hat.svg" width="800" height="1000" alt="Undyed linen bucket hat. Drawn stand-in, not a photograph.">
+        <figcaption>04 · Hat</figcaption>
+      </figure>
+    </article>
 
     <footer class="footnote">
-      <p>Linen Summer, for Los Angeles in 2028. One undyed shirt, cut for the heat.</p>
+      <p>Linen Summer, for Los Angeles in 2028. Undyed linen, cut for the heat.</p>
     </footer>
-  </div>
-
-  <a class="reach" href="#order" hidden>Order <strong>$148</strong></a>
+  </main>
   <noscript>
     <p class="sample" style="padding:1rem;">The ticket needs JavaScript to store an order on this device. Nothing here takes payment.</p>
   </noscript>
