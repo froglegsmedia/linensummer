@@ -84,6 +84,22 @@ body.shop { background: var(--desk); }
   border: 0;
 }
 
+.brand {
+  width: min(100% - 1.25rem, 72rem);
+  margin: 1rem auto 0;
+}
+
+.brand h1 {
+  margin: 0;
+  line-height: 0;
+}
+
+.brand img {
+  display: block;
+  width: min(100%, 36rem);
+  height: auto;
+}
+
 .rack {
   width: min(100% - 1.25rem, 72rem);
   margin: 0 auto;
@@ -122,6 +138,10 @@ body.shop { background: var(--desk); }
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.ticket .mast {
+  justify-content: flex-end;
 }
 
 .mast a {
