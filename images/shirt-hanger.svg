@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="t1">
+  <title id="t1">Undyed linen shirt on a wooden hanger</title>
+  <defs>
+    <pattern id="weave" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#e6d4b6"/>
+      <path d="M0 3.5 H7" stroke="#dcc6a4" stroke-width="0.7"/>
+      <path d="M3.5 0 V7" stroke="#f1e4cc" stroke-width="0.7"/>
+    </pattern>
+    <pattern id="weave-dark" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#d4c09a"/>
+      <path d="M0 3.5 H7" stroke="#c9b38c" stroke-width="0.7"/>
+      <path d="M3.5 0 V7" stroke="#e2d0b0" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="#f3ecdf"/>
+  <ellipse cx="400" cy="918" rx="210" ry="14" fill="#1c1814" opacity="0.06"/>
+  <!-- hanger bar, mostly hidden by the collar -->
+  <path d="M168 206 L400 96 L632 206" fill="none" stroke="#7a5734" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M400 96 V158" fill="none" stroke="#7a5734" stroke-width="8" stroke-linecap="round"/>
+  <!-- body -->
+  <path fill="url(#weave)" stroke="#1c1814" stroke-width="2.25" stroke-linejoin="round" d="
+    M268 196
+    L186 226
+    L96 312
+    L124 418
+    L210 352
+    L226 868
+    L574 868
+    L590 352
+    L676 418
+    L704 312
+    L614 226
+    L532 196
+    C492 176 446 214 400 236
+    C354 214 308 176 268 196
+    Z"/>
+  <!-- sleeve shade -->
+  <path fill="url(#weave-dark)" opacity="0.95" d="M186 228 L98 314 L126 414 L208 350 Z"/>
+  <path fill="url(#weave-dark)" opacity="0.95" d="M614 228 L702 314 L674 414 L592 350 Z"/>
+  <path d="M186 226 L96 312 L124 418 L210 352" fill="none" stroke="#1c1814" stroke-width="2.25" stroke-linejoin="round"/>
+  <path d="M614 226 L704 312 L676 418 L590 352" fill="none" stroke="#1c1814" stroke-width="2.25" stroke-linejoin="round"/>
+  <!-- cuff turns -->
+  <path d="M112 378 H148" fill="none" stroke="#1c1814" stroke-width="1.6"/>
+  <path d="M652 378 H688" fill="none" stroke="#1c1814" stroke-width="1.6"/>
+  <!-- side folds -->
+  <path d="M248 390 C268 520 246 700 252 850" fill="none" stroke="#c4ae88" stroke-width="2"/>
+  <path d="M552 390 C532 520 554 700 548 850" fill="none" stroke="#c4ae88" stroke-width="2"/>
+  <path d="M360 300 C372 480 358 680 370 840" fill="none" stroke="#d2be9a" stroke-width="1.5"/>
+  <!-- hem -->
+  <path d="M226 868 H574" fill="none" stroke="#1c1814" stroke-width="2.25"/>
+  <path d="M226 842 V868 M574 842 V868" fill="none" stroke="#1c1814" stroke-width="1.6"/>
+  <!-- neck opening -->
+  <path d="M338 188 L400 236 L462 188 L448 176 L400 204 L352 176 Z" fill="#f3ecdf"/>
+  <!-- collar leaves -->
+  <path fill="#efe3cc" stroke="#1c1814" stroke-width="2" stroke-linejoin="round" d="M286 170 L400 170 L400 208 L328 274 L248 202 Z"/>
+  <path fill="#efe3cc" stroke="#1c1814" stroke-width="2" stroke-linejoin="round" d="M514 170 L400 170 L400 208 L472 274 L552 202 Z"/>
+  <path d="M328 274 L400 214 L472 274" fill="none" stroke="#1c1814" stroke-width="1.5"/>
+  <!-- placket -->
+  <path d="M400 236 V828" fill="none" stroke="#1c1814" stroke-width="1.5"/>
+  <!-- pocket -->
+  <rect x="248" y="348" width="92" height="104" fill="none" stroke="#1c1814" stroke-width="1.6"/>
+  <rect x="254" y="354" width="80" height="92" fill="none" stroke="#c4ae88" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- buttons -->
+  <g fill="#f7f1e4" stroke="#1c1814" stroke-width="1.5">
+    <g>
+      <circle cx="400" cy="318" r="7.5"/>
+      <circle cx="400" cy="412" r="7.5"/>
+      <circle cx="400" cy="506" r="7.5"/>
+      <circle cx="400" cy="600" r="7.5"/>
+      <circle cx="400" cy="694" r="7.5"/>
+      <circle cx="400" cy="788" r="7.5"/>
+    </g>
+  </g>
+  <g fill="#1c1814">
+    <circle cx="397" cy="316" r="0.9"/>
+    <circle cx="403" cy="320" r="0.9"/>
+    <circle cx="397" cy="410" r="0.9"/>
+    <circle cx="403" cy="414" r="0.9"/>
+    <circle cx="397" cy="504" r="0.9"/>
+    <circle cx="403" cy="508" r="0.9"/>
+    <circle cx="397" cy="598" r="0.9"/>
+    <circle cx="403" cy="602" r="0.9"/>
+    <circle cx="397" cy="692" r="0.9"/>
+    <circle cx="403" cy="696" r="0.9"/>
+    <circle cx="397" cy="786" r="0.9"/>
+    <circle cx="403" cy="790" r="0.9"/>
+  </g>
+  <!-- hook -->
+  <path d="M400 98 C398 52 456 40 468 92" fill="none" stroke="#6a4a2c" stroke-width="7" stroke-linecap="round"/>
+</svg>
