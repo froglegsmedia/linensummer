@@ -100,6 +100,20 @@ body.shop { background: var(--desk); }
   height: auto;
 }
 
+.coast {
+  width: min(100% - 1.25rem, 72rem);
+  margin: 0.75rem auto 0;
+}
+
+.coast img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 12 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
 .rack {
   width: min(100% - 1.25rem, 72rem);
   margin: 0 auto;
