@@ -45,6 +45,11 @@
 
 html { scroll-behavior: smooth; }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a { color: inherit; }
 
 body {
@@ -85,8 +90,9 @@ body.shop { background: var(--desk); }
 }
 
 .brand {
-  width: min(100% - 1.25rem, 72rem);
+  width: min(100%, 72rem);
   margin: 1rem auto 0;
+  padding-inline: 1rem;
 }
 
 .brand h1 {
@@ -96,33 +102,37 @@ body.shop { background: var(--desk); }
 
 .brand img {
   display: block;
-  width: min(100%, 36rem);
+  width: min(100%, 32rem);
+  max-width: 100%;
   height: auto;
 }
 
 .coast {
-  width: min(100% - 1.25rem, 72rem);
-  margin: 0.75rem auto 0;
+  width: min(100%, 72rem);
+  margin: 0.7rem auto 0;
+  padding-inline: 1rem;
 }
 
 .coast img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 12 / 5;
+  max-width: 100%;
+  height: clamp(6.25rem, 32vw, 9.5rem);
   object-fit: cover;
   object-position: center;
 }
 
 .rack {
-  width: min(100% - 1.25rem, 72rem);
+  width: min(100%, 72rem);
   margin: 0 auto;
-  padding: 0.85rem 0 2.4rem;
+  padding: 0.85rem 1rem 2.4rem;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
 }
 
 .ticket {
+  min-width: 0;
   background: var(--paper);
   border: 1px solid var(--line);
   padding: 1rem 1.05rem 0.95rem;
@@ -245,12 +255,14 @@ legend {
 
 .sizes {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.35rem;
 }
 
 .sizes label {
   position: relative;
-  flex: 1;
+  flex: 1 1 2.6rem;
+  min-width: 0;
 }
 
 .sizes input {
@@ -533,9 +545,15 @@ h2 {
   outline-offset: 2px;
 }
 
-@media (min-width: 880px) {
+@media (min-width: 960px) {
+  .coast img {
+    height: auto;
+    aspect-ratio: 12 / 5;
+    max-height: 18rem;
+  }
+
   .rack {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 1.15rem;
     padding-top: 1.15rem;
   }
