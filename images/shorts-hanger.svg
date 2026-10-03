@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="t-shorts">
+  <title id="t-shorts">Undyed linen shorts with a drawstring, on a wooden hanger</title>
+  <defs>
+    <pattern id="weave" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#e6d4b6"/>
+      <path d="M0 3.5 H7" stroke="#dcc6a4" stroke-width="0.7"/>
+      <path d="M3.5 0 V7" stroke="#f1e4cc" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="#f3ecdf"/>
+  <ellipse cx="400" cy="760" rx="210" ry="13" fill="#1c1814" opacity="0.06"/>
+  <!-- hanger -->
+  <path d="M196 248 L400 140 L604 248" fill="none" stroke="#7a5734" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M400 140 V198" fill="none" stroke="#7a5734" stroke-width="8" stroke-linecap="round"/>
+  <path d="M400 140 C398 90 458 78 470 130" fill="none" stroke="#6a4a2c" stroke-width="7" stroke-linecap="round"/>
+  <!-- legs -->
+  <path fill="url(#weave)" stroke="#1c1814" stroke-width="2.25" stroke-linejoin="round" d="
+    M220 348
+    C208 450 198 560 214 690
+    H360
+    L382 500
+    C392 536 408 536 418 500
+    L440 690
+    H586
+    C602 560 592 450 580 348
+    Z"/>
+  <!-- waistband -->
+  <path fill="url(#weave)" stroke="#1c1814" stroke-width="2.25" d="M206 286 H594 V356 H206 Z"/>
+  <path d="M206 318 H594" fill="none" stroke="#c4ae88" stroke-width="1.4"/>
+  <!-- clips -->
+  <g stroke="#1c1814" stroke-width="1.5">
+    <rect x="278" y="240" width="26" height="58" rx="2" fill="#6a4a2c"/>
+    <rect x="496" y="240" width="26" height="58" rx="2" fill="#6a4a2c"/>
+    <path d="M282 264 H300" fill="none" stroke="#e7d7bc" stroke-width="1.6"/>
+    <path d="M500 264 H518" fill="none" stroke="#e7d7bc" stroke-width="1.6"/>
+  </g>
+  <!-- eyelets -->
+  <g fill="#f3ecdf" stroke="#1c1814" stroke-width="1.5">
+    <circle cx="356" cy="320" r="5.5"/>
+    <circle cx="444" cy="320" r="5.5"/>
+  </g>
+  <!-- drawstring bow -->
+  <path fill="#efe3cc" stroke="#1c1814" stroke-width="1.8" stroke-linejoin="round" d="
+    M400 312
+    C372 268 314 274 326 322
+    C336 360 374 346 400 318
+    Z"/>
+  <path fill="#efe3cc" stroke="#1c1814" stroke-width="1.8" stroke-linejoin="round" d="
+    M400 312
+    C428 268 486 274 474 322
+    C464 360 426 346 400 318
+    Z"/>
+  <path fill="#e6d4b6" stroke="#1c1814" stroke-width="1.6" d="
+    M386 318
+    C352 368 338 430 304 486
+    L320 494
+    C352 436 370 372 406 326
+    Z"/>
+  <path fill="#e6d4b6" stroke="#1c1814" stroke-width="1.6" d="
+    M414 318
+    C448 372 470 440 512 498
+    L496 506
+    C456 446 434 376 394 326
+    Z"/>
+  <ellipse cx="400" cy="316" rx="9" ry="8" fill="#dcc6a4" stroke="#1c1814" stroke-width="1.6"/>
+  <!-- pockets -->
+  <path d="M246 408 C286 424 310 468 298 520" fill="none" stroke="#1c1814" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M554 408 C514 424 490 468 502 520" fill="none" stroke="#1c1814" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- hems -->
+  <path d="M214 658 H360" fill="none" stroke="#1c1814" stroke-width="1.6"/>
+  <path d="M440 658 H586" fill="none" stroke="#1c1814" stroke-width="1.6"/>
+  <path d="M228 658 V690 M346 658 V690 M454 658 V690 M572 658 V690" fill="none" stroke="#1c1814" stroke-width="1.4"/>
+</svg>

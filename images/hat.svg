@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="t-hat">
+  <title id="t-hat">Undyed linen bucket hat</title>
+  <defs>
+    <pattern id="weave" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#e6d4b6"/>
+      <path d="M0 3.5 H7" stroke="#dcc6a4" stroke-width="0.7"/>
+      <path d="M3.5 0 V7" stroke="#f1e4cc" stroke-width="0.7"/>
+    </pattern>
+    <pattern id="weave-dark" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#d8c4a0"/>
+      <path d="M0 3.5 H7" stroke="#c9b38c" stroke-width="0.7"/>
+      <path d="M3.5 0 V7" stroke="#eadcc4" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="#f3ecdf"/>
+  <ellipse cx="400" cy="860" rx="240" ry="14" fill="#1c1814" opacity="0.06"/>
+  <!-- brim slopes down and out from the crown -->
+  <path fill="url(#weave)" stroke="#1c1814" stroke-width="2.25" stroke-linejoin="round" d="
+    M232 575
+    C150 630 96 710 128 778
+    C196 860 604 860 672 778
+    C704 710 650 630 568 575
+    Q400 655 232 575
+    Z"/>
+  <path d="M168 700 Q400 790 632 700" fill="none" stroke="#c4ae88" stroke-width="1.5"/>
+  <!-- crown -->
+  <path fill="url(#weave)" stroke="#1c1814" stroke-width="2.25" stroke-linejoin="round" d="
+    M268 430
+    C262 500 246 555 226 590
+    Q400 668 574 590
+    C554 555 538 500 532 430
+    Q400 488 268 430
+    Z"/>
+  <path fill="url(#weave-dark)" opacity="0.55" d="M520 455 C536 520 552 575 566 605 Q500 640 470 590 L492 470 Z"/>
+  <!-- crown top -->
+  <ellipse cx="400" cy="424" rx="136" ry="42" fill="#efe3cc" stroke="#1c1814" stroke-width="2.25"/>
+  <!-- stitch where the crown meets the brim -->
+  <path d="M236 582 Q400 652 564 582" fill="none" stroke="#1c1814" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <!-- eyelet on the right of the crown -->
+  <circle cx="500" cy="520" r="9" fill="#f3ecdf" stroke="#1c1814" stroke-width="1.6"/>
+  <circle cx="500" cy="520" r="3.2" fill="#1c1814" opacity="0.45"/>
+</svg>

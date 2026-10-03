@@ -2,14 +2,6 @@
   var TICKET_KEY = "linensummer.ticket";
   var ORDER_KEY = "linensummer.order";
 
-  var PRODUCT = {
-    id: "the-summer-shirt",
-    name: "The Summer Shirt",
-    color: "Natural",
-    cloth: "Undyed linen",
-    price: 148
-  };
-
   function read(key, fallback) {
     try {
       var raw = localStorage.getItem(key);
@@ -57,16 +49,21 @@
     }
   }
 
-  var orderForm = document.getElementById("order-form");
-  if (orderForm) {
-    orderForm.addEventListener("submit", function (event) {
+  var orderForms = document.querySelectorAll(".order-form");
+  for (var f = 0; f < orderForms.length; f++) {
+    orderForms[f].addEventListener("submit", function (event) {
       event.preventDefault();
-      var note = document.getElementById("form-note");
-      var sizeEl = orderForm.querySelector("input[name=size]:checked");
-      var qtyEl = document.getElementById("qty");
+      var form = event.currentTarget;
+      var note = form.querySelector(".form-note");
+      var sizeEl = form.querySelector("input[name=size]:checked");
+      var qtyEl = form.querySelector("input[name=qty]");
+      var price = parseInt(form.getAttribute("data-price"), 10);
+      var name = form.getAttribute("data-name");
+      var id = form.getAttribute("data-id");
+      if (!name || !id || !price) return;
       if (!sizeEl) {
         note.textContent = "Pick a size.";
-        var first = orderForm.querySelector("input[name=size]");
+        var first = form.querySelector("input[name=size]");
         if (first) first.focus();
         return;
       }
@@ -76,18 +73,20 @@
       var data = ticket();
       var found = null;
       for (var i = 0; i < data.items.length; i++) {
-        if (data.items[i].size === sizeEl.value) found = data.items[i];
+        if (data.items[i].id === id && data.items[i].size === sizeEl.value) found = data.items[i];
       }
       if (found) {
         found.qty += qty;
         if (found.qty > 6) found.qty = 6;
+        found.price = price;
+        found.name = name;
       } else {
         data.items.push({
-          id: PRODUCT.id,
-          name: PRODUCT.name,
-          color: PRODUCT.color,
-          cloth: PRODUCT.cloth,
-          price: PRODUCT.price,
+          id: id,
+          name: name,
+          color: form.getAttribute("data-color") || "Natural",
+          cloth: form.getAttribute("data-cloth") || "Undyed linen",
+          price: price,
           size: sizeEl.value,
           qty: qty
         });
@@ -95,16 +94,6 @@
       write(TICKET_KEY, data);
       window.location.href = "checkout.html";
     });
-
-    var reach = document.querySelector(".reach");
-    var order = document.getElementById("order");
-    if (reach && order && "IntersectionObserver" in window) {
-      var watcher = new IntersectionObserver(function (entries) {
-        reach.classList.toggle("is-on", !entries[0].isIntersecting);
-        reach.hidden = !!entries[0].isIntersecting;
-      }, { threshold: 0.2 });
-      watcher.observe(order);
-    }
   }
 
   var summary = document.getElementById("summary");
@@ -139,7 +128,7 @@
         what.textContent = item.name;
         var meta = document.createElement("p");
         meta.className = "meta";
-        meta.textContent = item.color + " " + item.cloth.toLowerCase() + " · size " + item.size + " · qty " + item.qty;
+        meta.textContent = item.color + " " + item.cloth.toLowerCase() + " · size " + item.size + " · qty " + item.qty + " · " + money(item.price) + " sample";
         var amt = document.createElement("p");
         amt.className = "amt";
         amt.textContent = money(lineTotal(item));
@@ -201,7 +190,7 @@
     row(dl, "Email", order.email);
     row(dl, "City", order.city);
     var itemText = order.items.map(function (item) {
-      return item.name + ", " + item.color.toLowerCase() + ", size " + item.size + ", qty " + item.qty + " (" + money(item.price * item.qty) + ")";
+      return item.name + ", " + item.color.toLowerCase() + ", size " + item.size + ", qty " + item.qty + ", " + money(item.price) + " sample (" + money(item.price * item.qty) + ")";
     }).join("; ");
     row(dl, "Order", itemText);
     row(dl, "Total", money(order.total) + " sample");
